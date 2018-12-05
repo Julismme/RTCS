@@ -1,0 +1,15 @@
+<view class="container">
+  <text class='word' style="font-size:{{fontSize}}pt">Jarvis say Hi</text>
+  <scroll-view scroll-y style="width:690rpx;height:{{list_height}}rpx">
+    <block wx:for="{{devicesList}}" wx:key="deviceId">
+      <view class="list-item" id="{{item.deviceId}}" bindtap="Connect">
+        <view style="display:flex;flex-direction:column;width:80%">
+          <text style="font-size:medium;word-break:break-all">Name: {{item.name}}</text>
+          <text style="font-size:x-small;color:gray;word-break:break-all">Devices ID: {{item.deviceId}}</text>
+          <text style="font-size:x-small;color:gray;word-break:break-all">RSSI: {{item.RSSI}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <button type="primary" class="button" loading="{{searching}}" bindtap="Search">{{searching?"Searching...":"Find Jarvis"}}</button>
+</view>

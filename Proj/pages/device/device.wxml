@@ -1,0 +1,13 @@
+<view class="container">
+  <text style="font-size:medium;word-break:break-all">Name：{{name}}</text>
+  <text style="font-size:x-small;color:gray;word-break:break-all">ID：{{connectedDeviceId}}</text>
+  <text style="font-size:x-small;color:gray">Condition：{{connected?"Connected":"Disconnected"}}</text>
+  <text style="font-size:medium;margin-top:10px">Time(Hours)：</text>
+  <input class="input" value="{{inputText}}" bindinput="bindInput" maxlength="20"/>
+  <text style="font-size:medium;bottom:50px">Weight：</text>
+  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
+  <button type="primary" class="button" bindtap="Feed" style="bottom:580rpx">Feed Now</button>
+  <button type="primary" class="button" bindtap="Sendtime" style="bottom:480rpx">Feed After Delay</button>
+  <button type="primary" class="button" bindtap="Sendtime" style="bottom:380rpx">Set Feeding Time</button>
+  <button type="primary" class="button" bindtap="Check"style="bottom:180rpx">Check Weight</button>
+</view>
